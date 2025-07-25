@@ -34,12 +34,6 @@
     hold-trigger-key-positions = <>;
 };
 
-&inc_dec_kp {
-    bindings = <&msc>, <&msc>;
-
-    tap-ms = <20>;
-};
-
 / {
     combos {
         // BASE
@@ -444,7 +438,9 @@
                                                 &lt 1 ESCAPE       &lt 5 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
             >;
 
-            sensor-bindings = <&none>, <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp PAGE_DOWN PG_UP>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         nav_layer {
