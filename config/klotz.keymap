@@ -19,7 +19,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -438,7 +437,9 @@
                                                 &lt 1 ESCAPE       &lt 5 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings =
+                <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
