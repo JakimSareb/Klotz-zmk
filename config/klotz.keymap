@@ -19,7 +19,7 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30   // default: 10
-#define ZMK_MOUSE_SCRL_VAL 140
+#define ZMK_MOUSE_SCRL_VAL 120
 #define BASE 0
 #define NAV  1
 #define SYM  2
