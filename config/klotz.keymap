@@ -419,12 +419,12 @@
         };
 
         msc_scroll: msc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             label = "MSC_SCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
 
-            tap-ms = <30>;
+            tap-ms = <20>;
         };
     };
 
@@ -447,7 +447,9 @@
                                                 &lt 1 ESCAPE       &lt 5 SPACE  &lt 3 ENTER  &lt 2 BACKSPACE
             >;
 
-            sensor-bindings = <&msc_scroll>, <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings =
+                <&msc_scroll SCRL_UP SCRL_DOWN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         nav_layer {
