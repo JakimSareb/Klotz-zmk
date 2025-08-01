@@ -421,10 +421,10 @@
         };
 
         msc_scroll: msc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             label = "MSC_SCROLL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc>, <&msc>;
 
             tap-ms = <20>;
         };
