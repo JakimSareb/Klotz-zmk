@@ -496,7 +496,7 @@
                                                        &kp RIGHT_PARENTHESIS                    &kp UNDER        &kp SPACE  &skq RSHFT
             >;
 
-            sensor-bindings = <&encoder_alt_tab>, <&msc_scroll>;
+            sensor-bindings = <&encoder_alt_tab>, <&inc_dec_kp SPACE BACKSPACE>;
         };
 
         fn_layer {
@@ -526,7 +526,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp PG_UP PAGE_DOWN>,
-                <&inc_dec_kp SPACE BACKSPACE>;
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         Base_arrows {
