@@ -140,9 +140,9 @@
             key-positions = <2 3>;
         };
 
-        bt {
-            bindings = <&mo 5>;
-            key-positions = <32 33>;
+        tab_app {
+            bindings = <&tabcw>;
+            key-positions = <1 2>;
             timeout-ms = <COMBOMS>;
         };
 
@@ -176,11 +176,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_COMMAND>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
-                <&kp LEFT_COMMAND>;
+                <&kp LCTRL>;
         };
 
         macro_ctrlz: macro_ctrlz {
@@ -188,11 +188,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp LEFT_GUI>;
+                <&kp LCTRL>;
         };
 
         macro_ctrlshftz: macro_ctrlshftz {
@@ -200,13 +200,13 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_release>,
                 <&kp LSHFT>;
         };
@@ -216,11 +216,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp X>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LCTRL>;
         };
 
         macro_ctrlc: macro_ctrlc {
@@ -228,11 +228,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LCTRL>;
         };
 
         macro_ctrlv: macro_ctrlv {
@@ -240,11 +240,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LCTRL>;
         };
 
         macro_ctrls: macro_ctrls {
@@ -252,11 +252,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LGUI>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp S>,
                 <&macro_release>,
-                <&kp LGUI>;
+                <&kp LCTRL>;
         };
 
         macro_up: macro_up {
