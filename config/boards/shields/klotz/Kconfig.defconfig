@@ -9,13 +9,10 @@ endif
 if SHIELD_KLOTZ_LEFT || SHIELD_KLOTZ_RIGHT
     config ZMK_SPLIT
         default y
-endif
 
-# Eliminamos la condición del Backlight por completo
-config GPIO
-    default y
+    config GPIO
+        default y
 
-config LED
-    default y
-
+    config LED
+        default y
 endif
