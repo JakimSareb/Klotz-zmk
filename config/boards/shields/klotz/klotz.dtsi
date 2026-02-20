@@ -30,7 +30,6 @@
             ;
     };
 
-    /* Definimos solo un encoder genérico aquí, la asignación real va en los .overlay */
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
@@ -40,7 +39,7 @@
         status = "disabled";
     };
 
-    sensors {
+    sensors: sensors_node {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
         status = "disabled";
