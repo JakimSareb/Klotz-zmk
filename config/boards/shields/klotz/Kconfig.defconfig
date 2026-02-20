@@ -11,7 +11,7 @@ if SHIELD_KLOTZ_LEFT || SHIELD_KLOTZ_RIGHT
         default y
 endif
 
-# Drivers necesarios para los LEDs indicadores
+# Eliminamos la condición del Backlight por completo
 config GPIO
     default y
 
