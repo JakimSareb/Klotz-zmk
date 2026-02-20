@@ -17,3 +17,5 @@ config GPIO
 
 config LED
     default y
+
+endif
