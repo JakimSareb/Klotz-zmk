@@ -62,25 +62,33 @@
 	};
 
 
-        backlight: node_backlight {
-        compatible = "zmk,backlight-gpio";
-        label = "Backlight";
-
-        led_0 {
+// Paso A: Definir los LEDs para el sistema
+    backlight_leds: backlight_leds {
+        compatible = "gpio-leds";
+        bl_led_0: bl_led_0 {
             gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
         };
-        led_1 {
+        bl_led_1: bl_led_1 {
             gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
         };
-        led_2 {
+        bl_led_2: bl_led_2 {
             gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
         };
+    };
+
+    // Paso B: Decirle a ZMK que use esos LEDs como Backlight
+    backlight: node_backlight {
+        compatible = "zmk,backlight-gpio";
+        label = "Backlight";
+        backlight-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>, 
+                          <&pro_micro 3 GPIO_ACTIVE_HIGH>, 
+                          <&pro_micro 4 GPIO_ACTIVE_HIGH>;
     };
 
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,backlight = &backlight; // <--- AÑADE ESTA LÍNEA
+        zmk,backlight = &backlight;
     };
 
 };
