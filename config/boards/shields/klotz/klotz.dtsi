@@ -61,20 +61,28 @@
 		sensors = <&left_encoder &right_encoder>;
 	};
 
-	backlight: node_backlight {
-            compatible = "zmk,backlight-gpio";
-	    label = "Backlight";
 
-	    led_0 {
-		gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
-	    };
-	    led_1 {
-		gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-	    };
-	    led_2 {
-		gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
-	    };
-	};
+	backlight: node_backlight {
+        compatible = "zmk,backlight-gpio";
+        label = "Backlight";
+
+        led_0 {
+            compatible = "gpio-leds"; // Añade esto
+            gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+            label = "Backlight LED 0";
+        };
+        led_1 {
+            compatible = "gpio-leds"; // Añade esto
+            gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
+            label = "Backlight LED 1";
+        };
+        led_2 {
+            compatible = "gpio-leds"; // Añade esto
+            gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+            label = "Backlight LED 2";
+        };
+    };
+    
     
     chosen {
         zmk,backlight = &backlight;
