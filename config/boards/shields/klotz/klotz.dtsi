@@ -65,24 +65,13 @@
 	backlight: node_backlight {
         compatible = "zmk,backlight-gpio";
         label = "Backlight";
-
-        led_0 {
-            compatible = "gpio-leds"; // Añade esto
-            gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 0";
-        };
-        led_1 {
-            compatible = "gpio-leds"; // Añade esto
-            gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 1";
-        };
-        led_2 {
-            compatible = "gpio-leds"; // Añade esto
-            gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 2";
-        };
+        // Usamos una lista de pines directamente bajo el nodo principal
+        backlight-gpios = 
+            <&pro_micro 2 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 3 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 4 GPIO_ACTIVE_HIGH>;
     };
-    
+
     
     chosen {
         zmk,backlight = &backlight;
