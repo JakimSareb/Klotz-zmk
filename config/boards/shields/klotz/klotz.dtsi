@@ -62,32 +62,32 @@
 	};
 
 
-// Paso A: Definir los LEDs para el sistema
+/* 1. Declaración de Hardware: Esto crea los dispositivos LED */
     backlight_leds: backlight_leds {
         compatible = "gpio-leds";
-        bl_led_0: bl_led_0 {
+        bl_led_0 {
             gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
         };
-        bl_led_1: bl_led_1 {
+        bl_led_1 {
             gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
         };
-        bl_led_2: bl_led_2 {
+        bl_led_2 {
             gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
         };
     };
 
-    // Paso B: Decirle a ZMK que use esos LEDs como Backlight
+    /* 2. Función Lógica: Esto le dice a ZMK que controle esos pines como Backlight */
     backlight: node_backlight {
         compatible = "zmk,backlight-gpio";
         label = "Backlight";
-        backlight-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>, 
-                          <&pro_micro 3 GPIO_ACTIVE_HIGH>, 
-                          <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+        backlight-gpios = 
+            <&pro_micro 2 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 3 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 4 GPIO_ACTIVE_HIGH>;
     };
 
+    /* 3. El nodo Chosen: Vincula la función de ZMK con el nodo lógico */
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
         zmk,backlight = &backlight;
     };
 
