@@ -11,11 +11,9 @@ if SHIELD_KLOTZ_LEFT || SHIELD_KLOTZ_RIGHT
         default y
 endif
 
-# Cambiamos PWM por GPIO/LED
-if ZMK_BACKLIGHT
-    config GPIO
-        default y
+# Drivers necesarios para los LEDs indicadores
+config GPIO
+    default y
 
-    config LED
-        default y
-endif
+config LED
+    default y
