@@ -59,24 +59,25 @@
         sensors = <&left_encoder &right_encoder>;
     };
 
+
+
     /* LEDs definidos como indicadores independientes */
     leds {
         compatible = "gpio-leds";
         led_pwr: led_0 {
             gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
             label = "Power Indicator";
-            /* Esto fuerza el encendido al arrancar */
-            line-asserted; 
         };
         led_bat: led_1 {
             gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
             label = "Battery Indicator";
-            line-asserted;
         };
         led_bt: led_2 {
             gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
             label = "Bluetooth Indicator";
-            line-asserted;
         };
     };
+
+
+
 };
