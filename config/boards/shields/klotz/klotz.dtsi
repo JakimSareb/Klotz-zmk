@@ -28,6 +28,14 @@
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+        // Definimos unas columnas por defecto para que no falle el compilador
+        col-gpios
+            = <&pro_micro 14 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+            ;
     };
 
     left_encoder: encoder_left {
@@ -39,7 +47,7 @@
         status = "disabled";
     };
 
-    sensors: sensors_node {
+    sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
         status = "disabled";
