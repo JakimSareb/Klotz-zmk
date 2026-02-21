@@ -37,26 +37,12 @@ CONFIG_ZMK_BLE=y
 CONFIG_GPIO=y
 CONFIG_LED=y
 
-# Intentar que los LEDs se inicialicen en ON
-CONFIG_LED_INIT_PRIORITY=90
-
-# Configuración de inicio
-CONFIG_ZMK_BACKLIGHT_BRT_START=80
-CONFIG_ZMK_BACKLIGHT_ON_START=y
-
 # Esto ayuda a evitar cálculos complejos de PWM en pines normales
 CONFIG_ZMK_BACKLIGHT_BRT_STEP=100
 
 # Si quieres que los LEDS se apaguen solos tras un tiempo de inactividad para ahorrar batería
 # CONFIG_ZMK_BACKLIGHT_AUTO_OFF_IDLE=y
 
-# Esto fuerza a que los GPIOs de los LEDs tengan energía
-CONFIG_ZMK_DISPLAY=n
-CONFIG_ZMK_IDLE_TIMEOUT=30000
-
-# Forzamos los estados de salida de los pines 2, 3 y 4
-# Nota: ZMK no tiene un "CONFIG_LED_ALWAYS_ON", 
-# así que lo ideal es manejarlos desde el keymap luego.
 
 ##################
 ### ZMK STUDIO ###
