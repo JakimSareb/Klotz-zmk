@@ -405,7 +405,7 @@
 &kp Q                &kp W            &kp E            &kp R              &kp T                 &kp Y        &kp U               &kp I             &mt MINUS O      &hmr APOSTROPHE P
 &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G                 &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
 &kp Z                &kp X            &kp C            &kp V              &lt 4 B               &kp N        &kp M               &kp COMMA         &kp PERIOD       &hmr QUESTION LEFT_BRACKET
-                                                       &mo 2              &mt LEFT_SHIFT SPACE  &lt 5 SPACE  &mo 1
+                                                       &lt 2 SPACE        &mt LEFT_SHIFT ENTER  &lt 5 ENTER  &lt 1 SPACE
             >;
 
             sensor-bindings =
