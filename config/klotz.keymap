@@ -417,7 +417,7 @@
             bindings = <
 &kp NUBS          &kp RIGHT_ALT  &none          &kp GLOBE       &kp LS(NUMBER_8)      &kp LS(NUMBER_9)       &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp EQUAL
 &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI   &kp LEFT_SHIFT  &kp LA(LEFT_BRACKET)  &kp LA(RIGHT_BRACKET)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LEFT_BRACKET
-&kp GRAVE         &none          &kp BACKSLASH  &none           &kp RA(LEFT_BRACE)    &kp RA(RIGHT_BRACE)    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
+&kp GRAVE         &none          &kp BACKSLASH  &none           &kp LA(APOS)          &kp LA(BACKSLASH)      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
                                                 &trans          &trans                &trans                 &trans
             >;
 
