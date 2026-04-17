@@ -81,13 +81,6 @@
 
         compatible = "zmk,combos";
         compatible = "zmk,combos";
-
-        combo_ret {
-            timeout-ms = <COMBOMS>;
-            key-positions = <25 26>;
-            bindings = <&kp RET>;
-        };
-
         compatible = "zmk,combos";
         compatible = "zmk,combos";
         compatible = "zmk,combos";
@@ -95,12 +88,6 @@
         compatible = "zmk,combos";
         compatible = "zmk,combos";
         compatible = "zmk,combos";
-
-        combo_return_left {
-            bindings = <&kp ENTER>;
-            key-positions = <23 22>;
-            layers = <0>;
-        };
 
         combo_mouse {
             bindings = <&tog 3>;
@@ -391,9 +378,9 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp Q                &kp W            &kp E            &kp R              &kp T                 &kp Y        &kp U               &kp I             &mt MINUS O      &hmr APOSTROPHE P
+&kp Q                &kp W            &kp E            &kp R              &kp T                 &kp Y        &kp U               &kp I             &kp O            &hmr APOSTROPHE P
 &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G                 &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
-&kp Z                &kp X            &kp C            &kp V              &lt 4 B               &kp N        &kp M               &kp COMMA         &lt 3 PERIOD     &hmr QUESTION LEFT_BRACKET
+&kp Z                &kp X            &kp C            &kp V              &lt 4 B               &kp N        &kp M               &kp COMMA         &kp PERIOD       &hmr MINUS SLASH
                                                        &lt 2 SPACE        &mt LEFT_SHIFT ENTER  &lt 5 ENTER  &lt 1 SPACE
             >;
 
@@ -423,10 +410,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp NUBS   &none  &none          &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp EQUAL
-&none      &none  &none          &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&kp GRAVE  &none  &kp BACKSLASH  &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
-                                 &trans  &trans                &trans                 &trans
+&kp NUBS          &kp RIGHT_ALT  &none          &kp C_MUTE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp EQUAL
+&kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_GUI   &kp LEFT_SHIFT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LEFT_BRACKET
+&kp GRAVE         &none          &kp BACKSLASH  &none           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
+                                                &trans          &trans                &trans                 &trans
             >;
 
             sensor-bindings =
@@ -436,9 +423,9 @@
 
         mouse_layer {
             bindings = <
-&none  &none           &mmv MOVE_UP    &none            &none           &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &mkp MB1      &mkp LCLK         &mkp MCLK     &mkp RCLK     &none
-&none  &none           &none           &none            &none           &none         &none             &none         &none         &none
+&none  &none           &mmv MOVE_UP    &none            &none           &none         &none             &none      &none      &none
+&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &mkp MB1      &mkp LCLK         &mkp MCLK  &mkp RCLK  &none
+&none  &none           &none           &none            &msc SCRL_DOWN  &none         &none             &none      &none      &none
                                        &kp LEFT_ALT     &kp LEFT_SHIFT  &kp LEFT_GUI  &kp LEFT_CONTROL
             >;
 
@@ -479,20 +466,6 @@
             >;
 
             sensor-bindings = <&encoder_alt_tab &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        Base_arrows {
-            display-name = "BASE";
-            bindings = <
-&kp Q            &kp W            &kp F         &kp P              &kp B        &kp J        &kp L               &kp U         &kp Y             &hmr DOUBLE_QUOTES SINGLE_QUOTE
-&hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O
-&kp Z            &kp X            &kp C         &kp D              &kp V        &kp K        &kp H               &kp COMMA     &kp PERIOD        &hmr QUESTION SLASH
-                                                &lt 1 ESCAPE       &lt 3 SPACE  &lt 4 ENTER  &lt 2 BACKSPACE
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
     };
 };
