@@ -402,10 +402,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp Q                &kp W            &kp E            &kp R              &kp T        &kp Y      &kp U               &kp I             &kp O            &hmr APOSTROPHE P
-&hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
-&kp Z                &kp X            &kp C            &kp V              &kp B        &kp N      &kp M               &kp COMMA         &kp PERIOD       &hmr QUESTION SLASH
-                                                       &lt 2 ENTER        &lt 5 SPACE  &kp SPACE  &lt 1 ENTER
+&kp Q                &kp W            &kp E            &kp R              &kp T                 &kp Y        &kp U               &kp I             &mt MINUS O      &hmr APOSTROPHE P
+&hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G                 &kp H        &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMICOLON
+&kp Z                &kp X            &kp C            &kp V              &lt 4 B               &kp N        &kp M               &kp COMMA         &kp PERIOD       &hmr QUESTION LEFT_BRACKET
+                                                       &lt 2 SPACE        &mt LEFT_SHIFT ENTER  &lt 5 ENTER  &lt 1 SPACE
             >;
 
             sensor-bindings =
@@ -434,10 +434,10 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
             bindings = <
-&kp NUBS   &none  &none  &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS
-&none      &none  &none  &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&kp GRAVE  &none  &none  &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH
-                         &trans  &trans                &trans                 &trans
+&kp NUBS   &none  &none          &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp EQUAL
+&none      &none  &none          &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
+&kp GRAVE  &none  &kp BACKSLASH  &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACKET
+                                 &trans  &trans                &trans                 &trans
             >;
 
             sensor-bindings =
